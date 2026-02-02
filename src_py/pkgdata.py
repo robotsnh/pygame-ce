@@ -43,7 +43,7 @@ except ImportError:
         """
         return False
 
-    def resource_stream(_package_or_requirement, _resource_name):
+    def resource_stream(_package_or_requirement, _resource_name) -> None:
         """
         A stub for when we fail to import this function.
 
