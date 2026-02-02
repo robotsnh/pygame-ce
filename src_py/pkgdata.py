@@ -52,7 +52,7 @@ except ImportError:
         raise NotImplementedError
 
 
-def getResource(identifier, pkgname=__name__):
+def getResource(identifier: str, pkgname: str = __name__):
     """
     Acquire a readable object for a given package name and identifier.
     An IOError will be raised if the resource can not be found.
