@@ -24,7 +24,7 @@ import sys
 try:
     from importlib.resources import files
 
-    def resource_exists(_package_or_requirement, _resource_name):
+    def resource_exists(_package_or_requirement, _resource_name) -> bool:
         _package_or_requirement = _package_or_requirement.split(".")[0]
         return files(_package_or_requirement).joinpath(_resource_name).is_file()
 
@@ -35,7 +35,7 @@ try:
 
 except ImportError:
 
-    def resource_exists(_package_or_requirement, _resource_name):
+    def resource_exists(_package_or_requirement, _resource_name) -> bool:
         """
         A stub for when we fail to import this function.
 
