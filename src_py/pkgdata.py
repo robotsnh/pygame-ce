@@ -28,7 +28,7 @@ try:
         _package_or_requirement = _package_or_requirement.split(".")[0]
         return files(_package_or_requirement).joinpath(_resource_name).is_file()
 
-    def resource_stream(_package_or_requirement, _resource_name):
+    def resource_stream(_package_or_requirement: str, _resource_name: str):
         _package_or_requirement = _package_or_requirement.split(".")[0]
         ref = files(_package_or_requirement).joinpath(_resource_name)
         return ref.open("rb")
